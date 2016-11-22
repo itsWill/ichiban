@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1> Edit Todo </h1>
+    <%= form_for([current_user, @todo]) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+      </br>
+
+      <%= f.label :description %>
+      <%= f.trix_editor :description %>
+      </br>
+
+      <%= f.label :status %>
+      <%= f.select(:status, [["todo", 'todo'],["In progress", "progress"], ["done", "done"]]) %>
+      </br></br>
+
+      <%= f.submit "Edit Todo", class: "btn btn-primary" %>
+    <% end %>
+    <%= render 'footer' %>
+  </div>
+</div>

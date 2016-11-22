@@ -1,0 +1,9 @@
+<footer class="footer">
+  <hr>
+  <small>
+    <a href="/" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-home"></i></a>
+    <% if current_user %>
+      <%= link_to "Todos", user_todos_path(current_user), class: "btn btn-default btn-xs" %>
+    <% end %>
+  </small>
+</footer>

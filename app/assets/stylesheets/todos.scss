@@ -1,0 +1,30 @@
+// Place all the styles related to the Todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.kanban-col {
+  border-right: 2px dashed black;
+  height: 100vh;
+  text-align: center;
+}
+
+.kanban-item {
+  text-align: left;
+}
+
+.kanban-title {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  padding-bottom: 10px;
+}
+
+.kanban-title > h2 {
+  display: inline;
+}
+
+.dropzone {
+  height: 100%;
+}
+
+#done-col  {
+  border: none;
+}

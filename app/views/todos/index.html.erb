@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-sm-4 col-xs-4 kanban-col">
+      <div class="kanban-title">
+        <a href="/" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-home"></i></a>
+        <h2> TODO </h2>
+        <a href="todos/new" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-plus"></i></a>
+      </div>
+      <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" status="todo">
+        <% @todos.todo.each do |item| %>
+          <%= render partial: "item", locals: {item: item} %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-4 kanban-col">
+      <div class="kanban-title" id="progress-title">
+        <h2>IN PROGRESS</h2>
+      </div>
+      <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" status="progress">
+        <% @todos.progress.each do |item| %>
+          <%= render partial: "item", locals: {item: item} %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4  col-xs-4 kanban-col" id="done-col">
+      <div class="kanban-title" id="done-title">
+        <h2>DONE</h2>
+      </div>
+      <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" status="done">
+        <% @todos.done.each do |item| %>
+          <%= render partial: "item", locals: {item: item} %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
