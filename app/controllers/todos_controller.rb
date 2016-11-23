@@ -1,4 +1,5 @@
 class TodosController < ApplicationController
+  before_action :correct_user, only: [:index, :edit, :update]
   def index
     @todos = current_user.todos
   end
@@ -37,5 +38,9 @@ class TodosController < ApplicationController
   private
     def todo_params
       params.require(:todo).permit(:status, :title, :description)
+    end
+
+    def correct_user
+      redirect_to root_url unless User.find_by_id(params[:user_id]) == current_user
     end
 end
