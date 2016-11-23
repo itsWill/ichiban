@@ -1,24 +1,12 @@
-# README
+# Ichiban
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ Ichiban is the minimalistic kanban board.
 
-Things you may want to cover:
+ It has a simle drag and drop interface with a rich text editor that supports markdown for creating todo items.
 
-* Ruby version
+ Sign up with a name and easily get started.
 
-* System dependencies
+ ## Contributions
 
-* Configuration
+ Contributions are welcome from everybody in the form of pull requests or new issues.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
