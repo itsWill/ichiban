@@ -17,10 +17,14 @@
   ev.preventDefault();
   id = ev.dataTransfer.getData("id")
   dragged = document.getElementById(id)
-  ev.target.appendChild(dragged)
   status = ev.target.getAttribute("status")
   $.ajax
     type: 'PATCH'
     url: "todos/" + id
     data: 'todo': 'status': status
+    timeout: 5000
+    success: () ->
+      ev.target.appendChild(dragged)
+    error: () ->
+      alert("couldn't updated todo's :(")
   return
